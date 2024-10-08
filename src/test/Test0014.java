@@ -17,8 +17,8 @@ class Test0014 {
 	
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
-		cuenta12345 = new Cuenta(0d);
-		cuenta67890 = new Cuenta(0d);
+		cuenta12345 = new Cuenta(50d, "12345","Cuenta 12345");
+		cuenta67890 = new Cuenta(0d, "67890", "Cuenta 67890");
 	}
 
 	@AfterAll
