@@ -3,15 +3,20 @@ package pkg;
 public class Cuenta {
 	
 	double saldo;
+	
+	public Cuenta(Double saldoIni) {
+		saldo = saldoIni;
+	}
+	
+	public void setSaldo(Double saldo) {
+		this.saldo = saldo;
+	}
+	
+	public Object getSaldo() {
+		return saldo;
+	}
 
 	public void Ingresar(double i) {
-		// TODO Auto-generated method stub
-		
+		saldo = saldo+i;
 	}
-
-	public Object getSaldo() {
-		// TODO Auto-generated method stub
-		return 500d;
-	}
-
 }
