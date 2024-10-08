@@ -8,10 +8,15 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import pkg.Cuenta;
+
 class CuentaTest {
+	
+	static Cuenta cuenta;
 
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
+		cuenta = new Cuenta();
 	}
 
 	@AfterAll
@@ -28,8 +33,8 @@ class CuentaTest {
 
 	@Test
 	void testIngresar() {
-		cuenta.Ingresar(500);
-		assetEquals(500, cuenta.getSaldo());
+		cuenta.Ingresar(500d);
+		assertEquals(500d, cuenta.getSaldo());
 	}
 
 }
