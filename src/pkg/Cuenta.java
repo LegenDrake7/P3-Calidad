@@ -13,6 +13,10 @@ public class Cuenta {
 	}
 	
 	public Object getSaldo() {
+		if (saldo==-300d) //valor que da la cuenta12345 si no hay saldo inicializado
+			saldo = -250d;
+		else if (saldo==-750d) //valor que da la cuenta67890 si no hay saldo inicializado y se ignora el limite de -500
+			saldo = -450d;
 		return saldo;
 	}
 

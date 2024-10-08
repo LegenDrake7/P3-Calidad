@@ -8,10 +8,17 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import pkg.Cuenta;
+
 class Test0014 {
 
+	static Cuenta cuenta12345;
+	static Cuenta cuenta67890;
+	
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
+		cuenta12345 = new Cuenta(0d);
+		cuenta67890 = new Cuenta(0d);
 	}
 
 	@AfterAll
@@ -28,14 +35,14 @@ class Test0014 {
 
 	@Test
 	void test0014() {
-		cuenta12345.retirar(200);
-		cuenta67890.retirar(350);
-		cuenta12345.ingresar(100);
-		cuenta67890.retirar(200);
-		cuenta67890.retirar(150);
-		cuenta12345.retirar(200);
-		cuenta67890.ingrear(50);
-		cuenta67890.retirar(100);
+		cuenta12345.Retirar(200);
+		cuenta67890.Retirar(350);
+		cuenta12345.Ingresar(100);
+		cuenta67890.Retirar(200);
+		cuenta67890.Retirar(150);
+		cuenta12345.Retirar(200);
+		cuenta67890.Ingresar(50);
+		cuenta67890.Retirar(100);
 		
 		System.out.println("Cuenta 12345: " +cuenta12345.getSaldo());
 		System.out.println("Cuenta 67890: " +cuenta67890.getSaldo());
